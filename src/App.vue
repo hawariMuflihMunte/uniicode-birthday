@@ -6,6 +6,16 @@ const codes = {
   js: () => {
     return `document.write('Aku Cinta UNIICODE')`.trim();
   },
+  c: () => {
+    return `#include <stdio.h>
+
+    int main () {
+      printf("Aku Cinta UNIICODE\n");
+
+      return 0;
+    }
+    `.trim();
+  },
   cpp: () => {
     return `#include <iostream>
     using namespace std;
@@ -29,6 +39,21 @@ const codes = {
   },
   ruby: () => {
     return `puts "Aku Cinta UNIICODE"`.trim();
+  },
+  go: () => {
+    return `package main
+
+    import "fmt"
+
+    func main() {
+        fmt.Println("Aku Cinta UNIICODE")
+    }
+    `.trim();
+  },
+  haskell: () => {
+    return `main :: IO()
+    main = putStrLn "Aku Cinta UNIICODE"
+    `.trim();
   }
 }
 </script>
@@ -53,6 +78,7 @@ const codes = {
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px 0;
 }
 
 @media (max-width: 576px) {
@@ -71,5 +97,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
+  place-items: center;
 }
 </style>
