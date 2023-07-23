@@ -9,13 +9,13 @@ import raihan from './assets/person/raihan.jpg';
 
 const codes = {
   js: () => {
-    return `document.write('Aku Cinta UNIICODE')`.trim();
+    return `console.log('Aku Cinta UNIICODE')`.trim();
   },
   c: () => {
     return `#include <stdio.h>
 
     int main () {
-      printf("Aku Cinta UNIICODE\n");
+      printf("Aku Cinta UNIICODE");
 
       return 0;
     }
@@ -69,10 +69,31 @@ const codes = {
       <UniicodeLogo />
     </div>
     <main>
-      <section class="person">
-        <img src="@/assets/person/hawari.jpg" alt="Hawari" class="person-img">
+      <section class="code-wrapper">
+        <section class="flex-col">
+          <img src="@/assets/person/hawari.jpg" alt="Hawari" class="person-img">
+          <img src="@/assets/person/reihan.jpg" alt="Raihan" class="person-img">
+        </section>
         <CodeBlock language="c">
           {{ codes.c() }}
+        </CodeBlock>
+      </section>
+      <section class="code-wrapper">
+        <section class="flex-col">
+          <img src="@/assets/person/hawari.jpg" alt="Hawari" class="person-img">
+          <img src="@/assets/person/reihan.jpg" alt="Raihan" class="person-img">
+          <img src="@/assets/person/galih.jpg" alt="Galih" class="person-img">
+        </section>
+        <CodeBlock language="c">
+          {{ codes.js() }}
+        </CodeBlock>
+      </section>
+      <section class="code-wrapper">
+        <section class="flex-col">
+          <img src="@/assets/person/hawari.jpg" alt="Hawari" class="person-img">
+        </section>
+        <CodeBlock language="ruby">
+          {{ codes.ruby() }}
         </CodeBlock>
       </section>
     </main>
@@ -126,17 +147,26 @@ main {
   background-color: #d7fd00;
 }
 
-.person {
-  min-width: 600px;
-  max-width: 800px;
+.code-wrapper {
+  min-width: 500px;
   display: flex;
-  flex-direction: column;
+  margin: 20px 0;
+  border: 3px solid #B7FD00;
+  padding: 0 12px 0 8px;
+  border-radius: 2px;
 }
 
 @media (max-width: 576px) {
-  .person {
-    min-width: 280px;
+  .code-wrapper {
+    min-width: 260px;
   }
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 6px;
 }
 
 .person-img {

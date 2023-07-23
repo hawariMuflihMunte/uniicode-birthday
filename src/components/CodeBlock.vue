@@ -17,11 +17,14 @@ const props = defineProps({
 
 <style scoped>
 article {
+  width: 100%;
   min-width: 240px;
   max-width: 480px;
 }
 
-pre {
+pre,
+code {
   max-width: 100%;
+  min-height: 100%;
 }
 </style>
