@@ -106,6 +106,13 @@ const codes = {
           {{ codes.php() }}
         </CodeBlock>
       </section>
+      <p>
+        HBD Bang Galih 😀
+        <br>
+        Semoga dengan memasuki U20 gajinya 20 digit juga wkwkwk...🤣
+        <br>
+        Semangat terus <code>Team Lead</code> UNIICODE 💪
+      </p>
     </main>
   </div>
 </template>
