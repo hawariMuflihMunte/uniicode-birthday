@@ -4,7 +4,12 @@ import CodeBlock from './components/CodeBlock.vue';
 
 const codes = {
   js: () => {
-    return `console.log('Aku Cinta UNIICODE')`.trim();
+    return ` function main = () => {
+      console.log('Aku Cinta UNIICODE');
+    }
+
+    main();
+    `.trim();
   },
   c: () => {
     return `#include <stdio.h>
@@ -74,7 +79,6 @@ const codes = {
       <section class="code-wrapper">
         <section class="flex-col">
           <img src="@/assets/person/hawari.jpg" alt="Hawari" class="person-img">
-          <img src="@/assets/person/reihan.jpg" alt="Raihan" class="person-img">
         </section>
         <CodeBlock language="c">
           {{ codes.c() }}
@@ -83,10 +87,9 @@ const codes = {
       <section class="code-wrapper">
         <section class="flex-col">
           <img src="@/assets/person/hawari.jpg" alt="Hawari" class="person-img">
-          <img src="@/assets/person/reihan.jpg" alt="Raihan" class="person-img">
           <img src="@/assets/person/galih.jpg" alt="Galih" class="person-img">
         </section>
-        <CodeBlock language="c">
+        <CodeBlock language="js">
           {{ codes.js() }}
         </CodeBlock>
       </section>
