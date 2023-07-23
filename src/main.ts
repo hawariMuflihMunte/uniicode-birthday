@@ -5,7 +5,7 @@ import App from './App.vue';
 
 // @ts-ignore
 import './assets/prism.js';
-import './assets/prism.css'
+import './assets/prism.css';
 
 const app = createApp(App);
 

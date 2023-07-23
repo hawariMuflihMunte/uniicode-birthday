@@ -1,10 +1,36 @@
 <script setup lang="ts">
 import UniicodeLogo from './components/UniicodeLogo.vue';
+import CodeBlock from './components/CodeBlock.vue';
 
-const myCode = `const foo = 'bar';
+const codes = {
+  js: () => {
+    return `document.write('Aku Cinta UNIICODE')`.trim();
+  },
+  cpp: () => {
+    return `#include <iostream>
+    using namespace std;
 
-console.log(foo)`;
+    int main() {
+      cout << "Aku cinta UNIICODE";
 
+      return 0;
+    }
+    `.trim();
+  },
+  java: () => {
+    return `public class Main {
+      public static void main(String[] args) {
+        System.out.println("Aku Cinta UNIICODE");
+      }
+    }`.trim();
+  },
+  python: () => {
+    return `print('Aku Cinta UNIICODE')`.trim();
+  },
+  ruby: () => {
+    return `puts "Aku Cinta UNIICODE"`.trim();
+  }
+}
 </script>
 
 <template>
@@ -12,9 +38,13 @@ console.log(foo)`;
     <div class="centered">
       <UniicodeLogo />
     </div>
-    <pre><code class="language-js">
-      {{ myCode }}
-    </code></pre>
+    <main>
+      <template v-for="(code, language) in codes" :key="language">
+        <CodeBlock :language="language">
+          {{ code() }}
+        </CodeBlock>
+      </template>
+    </main>
   </div>
 </template>
 
@@ -35,5 +65,11 @@ console.log(foo)`;
   display: flex;
   place-content: center;
   place-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 </style>
