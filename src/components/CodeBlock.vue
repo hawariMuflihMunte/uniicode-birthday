@@ -17,8 +17,6 @@ const props = defineProps({
 
 <style scoped>
 article {
-  display: flex;
-  place-content: center;
   min-width: 240px;
   max-width: 480px;
 }

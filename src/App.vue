@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
 import UniicodeLogo from './components/UniicodeLogo.vue';
 import CodeBlock from './components/CodeBlock.vue';
+
+import hawari from './assets/person/hawari.jpg';
+import cakAdi from './assets/person/cakAdi.jpg';
+import galih from './assets/person/galih.jpg';
+import raihan from './assets/person/raihan.jpg';
 
 const codes = {
   js: () => {
@@ -66,11 +69,12 @@ const codes = {
       <UniicodeLogo />
     </div>
     <main>
-      <template v-for="(code, language) in codes" :key="language">
-        <CodeBlock :language="language">
-          {{ code() }}
+      <section class="person">
+        <img src="@/assets/person/hawari.jpg" alt="Hawari" class="person-img">
+        <CodeBlock language="c">
+          {{ codes.c() }}
         </CodeBlock>
-      </template>
+      </section>
     </main>
   </div>
 </template>
@@ -120,5 +124,25 @@ main {
 
 .uniicode-button:hover {
   background-color: #d7fd00;
+}
+
+.person {
+  min-width: 600px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 576px) {
+  .person {
+    min-width: 280px;
+  }
+}
+
+.person-img {
+  display: block;
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 50%;
 }
 </style>
