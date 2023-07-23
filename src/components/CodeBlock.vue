@@ -8,11 +8,22 @@ const props = defineProps({
 </script>
 
 <template>
-  <pre><code :class="`language-${props.language}`">
-    <slot></slot>
-  </code></pre>
+  <article>
+    <pre><code :class="`language-${props.language}`">
+      <slot></slot>
+    </code></pre>
+  </article>
 </template>
 
-<style>
+<style scoped>
+article {
+  display: flex;
+  place-content: center;
+  min-width: 240px;
+  max-width: 480px;
+}
 
+pre {
+  max-width: 100%;
+}
 </style>
