@@ -107,9 +107,15 @@ const codes = {
         </CodeBlock>
       </section>
       <p>
-        HBD Bang Galih 😀
+        <center>HBD Bang Galih 😀</center>
         <br>
         Semoga dengan memasuki U20 gajinya 20 digit juga wkwkwk...🤣
+        <br>
+        Dan Semoga yang disemogakan tersemogakan 🤲
+        <br>
+        <br>
+        Barakallah fi umrik 🤗
+        <br>
         <br>
         Semangat terus <code>Team Lead</code> UNIICODE 💪
       </p>
