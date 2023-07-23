@@ -7,6 +7,10 @@ import UniicodeLogo from './components/UniicodeLogo.vue';
     <div class="centered">
       <UniicodeLogo />
     </div>
+    <prism-code language="js">
+      console.log('Hello World')
+      Lorem ipsum dolor sit amet.
+    </prism-code>
   </div>
 </template>
 

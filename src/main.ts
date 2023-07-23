@@ -1,6 +1,10 @@
-import './assets/main.css'
+import 'prismjs/themes/prism-okaidia.min.css';
+import './assets/main.css';
 
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import PrismCode from 'vue-prism-component';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.component('prism-code', PrismCode);
+app.mount('#app');
