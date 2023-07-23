@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import UniicodeLogo from './components/UniicodeLogo.vue';
+
+const myCode = `const foo = 'bar';
+
+console.log(foo)`;
+
 </script>
 
 <template>
@@ -7,10 +12,9 @@ import UniicodeLogo from './components/UniicodeLogo.vue';
     <div class="centered">
       <UniicodeLogo />
     </div>
-    <prism-code language="js">
-      console.log('Hello World')
-      Lorem ipsum dolor sit amet.
-    </prism-code>
+    <pre><code class="language-js">
+      {{ myCode }}
+    </code></pre>
   </div>
 </template>
 

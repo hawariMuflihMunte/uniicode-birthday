@@ -10,13 +10,12 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
-    "prismjs": "^1.29.0",
-    "vue": "^3.3.4",
-    "vue-prism-component": "^2.0.0"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@tsconfig/node18": "^2.0.1",
     "@types/node": "^18.16.17",
+    "@types/prismjs": "^1.26.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vue/tsconfig": "^0.4.0",
