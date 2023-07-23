@@ -2,11 +2,6 @@
 import UniicodeLogo from './components/UniicodeLogo.vue';
 import CodeBlock from './components/CodeBlock.vue';
 
-import hawari from './assets/person/hawari.jpg';
-import cakAdi from './assets/person/cakAdi.jpg';
-import galih from './assets/person/galih.jpg';
-import raihan from './assets/person/raihan.jpg';
-
 const codes = {
   js: () => {
     return `console.log('Aku Cinta UNIICODE')`.trim();
