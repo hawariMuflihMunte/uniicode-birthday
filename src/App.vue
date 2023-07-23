@@ -4,31 +4,69 @@ import { ref } from 'vue';
 import UniicodeLogo from './components/UniicodeLogo.vue';
 import CodeBlock from './components/CodeBlock.vue';
 
-// @ts-ignore
-import { codes } from './utils/local-data.js';
+const codes = {
+  js: () => {
+    return `document.write('Aku Cinta UNIICODE')`.trim();
+  },
+  c: () => {
+    return `#include <stdio.h>
 
-const myCodes: any[] = codes;
+    int main () {
+      printf("Aku Cinta UNIICODE\n");
 
-const openApp = ref(false);
+      return 0;
+    }
+    `.trim();
+  },
+  cpp: () => {
+    return `#include <iostream>
+    using namespace std;
 
-function toggleOpenApp() {
-  openApp.value = !openApp.value;
-}
+    int main() {
+      cout << "Aku cinta UNIICODE";
+
+      return 0;
+    }
+    `.trim();
+  },
+  java: () => {
+    return `public class Main {
+      public static void main(String[] args) {
+        System.out.println("Aku Cinta UNIICODE");
+      }
+    }`.trim();
+  },
+  python: () => {
+    return `print('Aku Cinta UNIICODE')`.trim();
+  },
+  ruby: () => {
+    return `puts "Aku Cinta UNIICODE"`.trim();
+  },
+  go: () => {
+    return `package main
+
+    import "fmt"
+
+    func main() {
+        fmt.Println("Aku Cinta UNIICODE")
+    }
+    `.trim();
+  },
+  haskell: () => {
+    return `main :: IO()
+    main = putStrLn "Aku Cinta UNIICODE"
+    `.trim();
+  }
+};
 </script>
 
 <template>
-  <button
-    @click="toggleOpenApp"
-    class="uniicode-button"
-  >
-    OPEN
-  </button>
   <div class="container">
     <div class="centered">
       <UniicodeLogo />
     </div>
     <main>
-      <template v-for="(code, language) in myCodes" :key="language">
+      <template v-for="(code, language) in codes" :key="language">
         <CodeBlock :language="language">
           {{ code() }}
         </CodeBlock>
