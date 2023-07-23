@@ -3,7 +3,7 @@ import uniicodeJpg from './img/uniicode.jpg';
 import uniicodeWebp from './img/uniicode.webp';
 
 // Check WebP support
-const supportsWebp = () => {
+const supportsWebp = (): boolean => {
   const canvas = document.createElement('canvas');
   return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
 }
