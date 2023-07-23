@@ -54,6 +54,13 @@ const codes = {
     return `main :: IO()
     main = putStrLn "Aku Cinta UNIICODE"
     `.trim();
+  },
+  php: () => {
+    return `
+      // NativePHP
+
+      echo "Aku Cinta UNIICODE"
+    `.trim();
   }
 };
 </script>
@@ -89,6 +96,14 @@ const codes = {
         </section>
         <CodeBlock language="ruby">
           {{ codes.ruby() }}
+        </CodeBlock>
+      </section>
+      <section class="code-wrapper">
+        <section class="flex-col">
+          <img src="@/assets/person/galih.jpg" alt="Galih" class="person-img">
+        </section>
+        <CodeBlock language="php">
+          {{ codes.php() }}
         </CodeBlock>
       </section>
     </main>
