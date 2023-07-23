@@ -118,6 +118,18 @@ const codes = {
         <br>
         <br>
         Semangat terus <code>Team Lead</code> UNIICODE 💪
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        Dan semoga makin langgeng dengan <pre><code>NativePHP</code></pre> nya ya bang... 👨‍💻
       </p>
     </main>
   </div>
